@@ -104,13 +104,21 @@ button {
   color: var(--turquoise);
 }
 
+.desktop-nav a[aria-current="page"] {
+  color: var(--navy);
+}
+
 .header-cta,
 .primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid var(--orange);
   background: var(--orange);
   color: #fff;
   cursor: pointer;
   font-weight: 700;
+  text-decoration: none;
   text-transform: uppercase;
   transition: transform 180ms ease, background 180ms ease, box-shadow 180ms ease;
 }
