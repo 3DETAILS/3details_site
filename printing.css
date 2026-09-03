@@ -974,3 +974,618 @@
     transition: none;
   }
 }
+
+/* Visual refinement v2: closer to the approved concept */
+.printing-page main {
+  background:
+    radial-gradient(circle at 86% 12%, rgb(7 158 178 / 8%), transparent 24%),
+    radial-gradient(circle at 6% 58%, rgb(255 89 23 / 5%), transparent 19%),
+    linear-gradient(rgb(7 29 67 / 2.8%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(7 29 67 / 2.8%) 1px, transparent 1px),
+    #fff;
+  background-size: auto, auto, 52px 52px, 52px 52px, auto;
+}
+
+.printing-page h1,
+.printing-page .section-title,
+.printing-page .technology-copy h3,
+.printing-page .equipment-copy h3,
+.printing-page .print-cta h2,
+.printing-page .process-card h3,
+.printing-page .workflow-card h3,
+.printing-page .material-line,
+.printing-page .technology-facts dt,
+.printing-page .spec-list strong {
+  font-family: "Bebas Neue", "Oswald", "Arial Narrow", sans-serif;
+  font-weight: 400;
+}
+
+.print-section,
+.print-section:nth-of-type(odd),
+.finishing {
+  background: transparent;
+}
+
+.print-hero {
+  grid-template-columns: minmax(590px, 0.78fr) minmax(680px, 1.22fr);
+  min-height: min(760px, calc(100svh - 112px));
+  background:
+    radial-gradient(ellipse at 78% 45%, rgb(7 158 178 / 7%), transparent 42%),
+    linear-gradient(90deg, #fff 0%, rgb(255 255 255 / 94%) 38%, transparent 68%);
+}
+
+.print-hero-copy {
+  z-index: 3;
+  padding-left: clamp(2rem, 4vw, 5rem);
+}
+
+.print-hero h1 {
+  margin-top: 1.35rem;
+  font-size: clamp(5.2rem, 7vw, 8.2rem);
+  font-weight: 400;
+  letter-spacing: 0.005em;
+  line-height: 0.88;
+  white-space: nowrap;
+}
+
+.print-lead {
+  max-width: 610px;
+  font-size: clamp(1.05rem, 1.22vw, 1.22rem);
+  line-height: 1.75;
+}
+
+.print-hero-visual {
+  padding: 2.2rem 0 2.2rem 0;
+}
+
+.hero-photo-frame {
+  width: 100%;
+  height: min(650px, 68vh);
+  min-height: 500px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.hero-photo-frame::before,
+.hero-photo-frame::after {
+  position: absolute;
+  z-index: 2;
+  content: "";
+  pointer-events: none;
+}
+
+.hero-photo-frame::before {
+  inset: 0 auto 0 0;
+  width: 19%;
+  background: linear-gradient(90deg, #fff, transparent);
+}
+
+.hero-photo-frame::after {
+  inset: auto 0 0;
+  height: 17%;
+  background: linear-gradient(0deg, #fff, transparent);
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 70%;
+  filter: contrast(1.03) saturate(0.92);
+  transform: none;
+}
+
+.hero-tech-mark-one { top: 8%; right: 5%; }
+.hero-tech-mark-two { bottom: 8%; left: 5%; }
+
+.technology-grid {
+  gap: 1.6rem;
+}
+
+.technology-card {
+  position: relative;
+  grid-template-columns: minmax(350px, 1.06fr) minmax(280px, 0.94fr);
+  min-height: 640px;
+  isolation: isolate;
+  border-color: rgb(7 29 67 / 78%);
+  background: rgb(255 255 255 / 80%);
+  box-shadow: 0 28px 70px rgb(7 29 67 / 9%);
+  backdrop-filter: blur(5px);
+}
+
+.technology-card::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: radial-gradient(circle at 88% 52%, rgb(91 35 184 / 26%), transparent 42%);
+  content: "";
+}
+
+.technology-card:nth-child(2)::after {
+  background:
+    radial-gradient(circle at 91% 36%, rgb(7 158 178 / 18%), transparent 39%),
+    radial-gradient(circle at 88% 84%, rgb(255 89 23 / 10%), transparent 32%);
+}
+
+.technology-copy {
+  padding: clamp(2.2rem, 3vw, 3.2rem) 0 clamp(2rem, 3vw, 3rem) clamp(2.2rem, 3vw, 3.2rem);
+}
+
+.technology-copy h3 {
+  font-size: clamp(3.45rem, 3.9vw, 5.2rem);
+  letter-spacing: 0.005em;
+  line-height: 0.9;
+  white-space: nowrap;
+}
+
+.technology-copy > p:not(.tech-label):not(.material-line) {
+  max-width: 520px;
+}
+
+.technology-facts div {
+  grid-template-columns: 158px 1fr;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.9rem 0;
+}
+
+.technology-facts dt {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+}
+
+.fact-icon {
+  display: inline-grid;
+  width: 26px;
+  height: 26px;
+  flex: 0 0 26px;
+  border: 1px solid var(--turquoise);
+  border-radius: 50%;
+  color: var(--turquoise);
+  font-family: Manrope, sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  place-items: center;
+}
+
+.fact-icon-gear {
+  font-size: 0.82rem;
+}
+
+.technology-image {
+  z-index: 2;
+  overflow: visible;
+}
+
+.technology-image::before {
+  display: none;
+}
+
+.technology-image img {
+  position: absolute;
+  right: -13%;
+  bottom: -4%;
+  width: 128%;
+  height: 82%;
+  object-fit: contain;
+  object-position: right bottom;
+  filter: drop-shadow(0 28px 28px rgb(7 29 67 / 19%));
+}
+
+.technology-image-resin img {
+  right: -5%;
+  bottom: -10%;
+  width: 112%;
+  height: 112%;
+  object-position: right bottom;
+}
+
+.equipment {
+  overflow: hidden;
+  background:
+    linear-gradient(rgb(7 29 67 / 3%) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(7 29 67 / 3%) 1px, transparent 1px),
+    radial-gradient(circle at 10% 31%, rgb(255 183 0 / 18%), transparent 27%),
+    radial-gradient(circle at 89% 78%, rgb(7 196 220 / 16%), transparent 28%),
+    rgb(248 251 251 / 78%);
+  background-size: 48px 48px, 48px 48px, auto, auto, auto;
+}
+
+.equipment-list {
+  gap: 4.5rem;
+}
+
+.equipment-card {
+  grid-template-columns: minmax(480px, 0.94fr) minmax(520px, 1.06fr);
+  min-height: 590px;
+  overflow: visible;
+  border-color: rgb(7 29 67 / 72%);
+  background: rgb(255 255 255 / 76%);
+  box-shadow: 0 32px 90px rgb(7 29 67 / 10%);
+  backdrop-filter: blur(5px);
+}
+
+.equipment-cover {
+  position: relative;
+  min-height: 590px;
+  overflow: visible;
+  background: transparent;
+  isolation: isolate;
+}
+
+.equipment-cover::before {
+  position: absolute;
+  z-index: -1;
+  top: -2.4rem;
+  left: -1.1rem;
+  width: 108%;
+  color: rgb(7 29 67 / 8%);
+  content: attr(data-backdrop);
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+  font-size: clamp(4rem, 7.2vw, 8rem);
+  line-height: 0.76;
+  overflow-wrap: anywhere;
+  text-transform: uppercase;
+}
+
+.equipment-cover-anycubic::before { color: rgb(255 183 0 / 23%); }
+.equipment-cover-elegoo::before { color: rgb(7 174 199 / 21%); }
+
+.equipment-cover img {
+  position: absolute;
+  z-index: 2;
+  right: 2%;
+  bottom: -5.5%;
+  width: 96%;
+  height: 113%;
+  object-fit: contain;
+  object-position: center bottom;
+  filter: drop-shadow(0 30px 25px rgb(7 29 67 / 19%));
+}
+
+.equipment-cover-elegoo img {
+  right: -2%;
+  bottom: -6%;
+  width: 103%;
+  height: 116%;
+}
+
+.equipment-copy {
+  position: relative;
+  z-index: 3;
+  padding: clamp(2.4rem, 4vw, 4.5rem);
+}
+
+.equipment-copy h3 {
+  font-size: clamp(3rem, 4vw, 5.1rem);
+  letter-spacing: 0.005em;
+  line-height: 0.92;
+}
+
+.finishing {
+  background:
+    radial-gradient(circle at 8% 28%, rgb(7 158 178 / 9%), transparent 26%),
+    radial-gradient(circle at 92% 80%, rgb(255 89 23 / 6%), transparent 24%),
+    rgb(255 255 255 / 62%);
+}
+
+.process-row {
+  gap: 0;
+  padding: 1.6rem 0;
+  border-top: 1px solid rgb(7 29 67 / 20%);
+  border-bottom: 1px solid rgb(7 29 67 / 20%);
+}
+
+.process-card {
+  min-height: 300px;
+  justify-content: flex-end;
+  padding: 0.8rem 0.7rem 1.3rem;
+  border: 0;
+  border-right: 1px solid rgb(7 29 67 / 12%);
+  border-radius: 0;
+  background: transparent;
+}
+
+.process-card:last-child {
+  border-right: 0;
+}
+
+.process-card::before {
+  position: absolute;
+  z-index: -1;
+  top: 22%;
+  left: 50%;
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  background: rgb(7 158 178 / 5%);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.process-card:not(:last-child)::after {
+  right: -0.48rem;
+  background: #fff;
+}
+
+.process-card img {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 0.9rem;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 12px 12px rgb(7 29 67 / 10%));
+}
+
+.process-card h3,
+.workflow-card h3 {
+  letter-spacing: 0.025em;
+}
+
+.workflow-row {
+  gap: 0;
+  border-top: 1px solid rgb(7 29 67 / 20%);
+  border-bottom: 1px solid rgb(7 29 67 / 20%);
+}
+
+.workflow-card {
+  grid-template-columns: 60px 1fr;
+  min-height: 390px;
+  padding: 1.5rem 1.25rem 1.4rem;
+  border: 0;
+  border-right: 1px solid rgb(7 29 67 / 13%);
+  border-radius: 0;
+  background: transparent;
+}
+
+.workflow-card:last-child {
+  border-right: 0;
+}
+
+.workflow-card:not(:last-child)::after {
+  right: -0.78rem;
+  background: #fff;
+  font-size: 1.8rem;
+}
+
+.workflow-card > span {
+  font-family: "Bebas Neue", "Oswald", sans-serif;
+  font-weight: 400;
+}
+
+.workflow-card img {
+  width: 100%;
+  height: 275px;
+  object-fit: contain;
+  mix-blend-mode: normal;
+  filter: drop-shadow(0 16px 15px rgb(7 29 67 / 9%));
+}
+
+@media (max-width: 1380px) {
+  .print-hero {
+    grid-template-columns: minmax(500px, 0.86fr) minmax(560px, 1.14fr);
+  }
+
+  .print-hero h1 {
+    font-size: clamp(4.7rem, 7vw, 7rem);
+  }
+
+  .technology-card {
+    grid-template-columns: minmax(390px, 1.08fr) minmax(290px, 0.92fr);
+  }
+
+  .technology-copy {
+    min-height: 610px;
+  }
+
+  .technology-image {
+    height: auto;
+  }
+
+  .process-row {
+    gap: 1px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .print-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .print-hero-visual {
+    padding: 0 0 4rem 10%;
+  }
+
+  .hero-photo-frame {
+    height: 540px;
+  }
+
+  .technology-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .technology-card {
+    grid-template-columns: minmax(390px, 1.04fr) minmax(300px, 0.96fr);
+  }
+
+  .technology-copy {
+    min-height: 580px;
+  }
+
+  .equipment-card {
+    grid-template-columns: 1fr;
+  }
+
+  .equipment-cover,
+  .equipment-copy {
+    order: initial;
+  }
+
+  .equipment-card-reverse .equipment-cover {
+    order: initial;
+  }
+
+  .equipment-cover {
+    min-height: 540px;
+  }
+
+  .equipment-cover img {
+    right: 8%;
+    width: 84%;
+  }
+
+  .equipment-cover-elegoo img {
+    right: 10%;
+    width: 80%;
+  }
+
+  .workflow-card img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 760px) {
+  .print-hero h1 {
+    font-size: clamp(3.75rem, 18vw, 5.7rem);
+    white-space: nowrap;
+  }
+
+  .print-lead br {
+    display: none;
+  }
+
+  .print-hero-visual {
+    padding-left: 0;
+  }
+
+  .hero-photo-frame {
+    height: 430px;
+  }
+
+  .technology-card {
+    grid-template-columns: 1fr;
+    min-height: 770px;
+  }
+
+  .technology-copy {
+    min-height: 500px;
+    padding: 2rem 1.35rem 0;
+  }
+
+  .technology-copy h3 {
+    font-size: clamp(3.3rem, 16vw, 4.6rem);
+  }
+
+  .technology-facts div {
+    grid-template-columns: 142px 1fr;
+  }
+
+  .technology-image {
+    height: 300px;
+  }
+
+  .technology-image img {
+    right: -5%;
+    bottom: -9%;
+    width: 112%;
+    height: 112%;
+  }
+
+  .technology-image-resin img {
+    right: 1%;
+    bottom: -12%;
+    width: 98%;
+    height: 135%;
+  }
+
+  .equipment-list {
+    gap: 3rem;
+  }
+
+  .equipment-cover {
+    min-height: 420px;
+  }
+
+  .equipment-cover::before {
+    top: -1rem;
+    font-size: clamp(4rem, 21vw, 6.5rem);
+  }
+
+  .equipment-cover img,
+  .equipment-cover-elegoo img {
+    right: 5%;
+    bottom: -5%;
+    width: 90%;
+    height: 108%;
+  }
+
+  .process-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 0;
+  }
+
+  .process-card,
+  .process-card:last-child {
+    min-height: 260px;
+    border-right: 1px solid rgb(7 29 67 / 12%);
+    border-bottom: 1px solid rgb(7 29 67 / 12%);
+  }
+
+  .process-card:nth-child(even) {
+    border-right: 0;
+  }
+
+  .process-card img {
+    height: 180px;
+  }
+
+  .workflow-row {
+    border: 0;
+  }
+
+  .workflow-card,
+  .workflow-card:last-child {
+    min-height: 330px;
+    border-right: 0;
+    border-bottom: 1px solid rgb(7 29 67 / 14%);
+  }
+
+  .workflow-card img {
+    height: 220px;
+  }
+}
+
+@media (max-width: 460px) {
+  .print-hero h1 {
+    font-size: clamp(3.25rem, 17.2vw, 4.5rem);
+  }
+
+  .technology-card {
+    min-height: 820px;
+  }
+
+  .technology-copy {
+    min-height: 555px;
+  }
+
+  .technology-copy h3 {
+    font-size: clamp(3rem, 15.8vw, 4rem);
+  }
+
+  .technology-facts div {
+    grid-template-columns: 1fr;
+    gap: 0.65rem;
+  }
+
+  .equipment-cover {
+    min-height: 350px;
+  }
+}
