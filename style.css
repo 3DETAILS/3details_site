@@ -216,10 +216,14 @@ h1 {
 
 .primary-button,
 .secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   min-width: 236px;
   min-height: 68px;
   padding: 0 1.5rem;
   font-size: 1rem;
+  text-decoration: none;
 }
 
 .secondary-button {

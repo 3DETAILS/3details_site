@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="3D-печать на заказ в Москве: FDM и MSLA, функциональные детали, миниатюры, малые серии и постобработка.">
+  <meta name="theme-color" content="#ffffff">
+  <title>3D-печать — 3DETAILS</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Oswald:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="printing.css">
+</head>
+
+<body class="printing-page">
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="3DETAILS — на главную">
+        <img src="assets/logo.png" alt="3DETAILS — мастерская печати пластиком">
+      </a>
+
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="index.html">Главная</a>
+        <a href="printing.html" aria-current="page">3D-печать</a>
+        <a href="index.html">3D-моделирование</a>
+        <a href="index.html">3D-сканирование</a>
+        <a href="index.html">Готовые изделия</a>
+        <a href="contacts.html">Контакты</a>
+      </nav>
+
+      <a class="header-cta" href="contacts.html#contact-actions">Перейти к заказу</a>
+
+      <details class="mobile-menu">
+        <summary aria-label="Открыть меню"><span></span><span></span><span></span></summary>
+        <nav aria-label="Мобильная навигация">
+          <a href="index.html">Главная</a>
+          <a href="printing.html" aria-current="page">3D-печать</a>
+          <a href="index.html">3D-моделирование</a>
+          <a href="index.html">3D-сканирование</a>
+          <a href="index.html">Готовые изделия</a>
+          <a href="contacts.html">Контакты</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="print-hero" aria-labelledby="print-title">
+        <div class="section-grid" aria-hidden="true"></div>
+        <div class="print-hero-copy">
+          <p class="print-kicker">Детали <span></span> прототипы <span></span> малые серии</p>
+          <h1 id="print-title">3D-печать<span class="orange-dot">.</span></h1>
+          <p class="print-lead">Изготавливаем от одного экземпляра до небольшой партии — по готовой модели, чертежу, эскизу или образцу.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="contacts.html#contact-actions">Рассчитать заказ</a>
+            <a class="secondary-button" href="#works">Смотреть работы</a>
+          </div>
+        </div>
+        <div class="print-hero-visual">
+          <div class="hero-photo-frame">
+            <img src="assets/printing/hero.webp" alt="Пример функциональной детали, изготовленной методом 3D-печати">
+          </div>
+          <span class="hero-tech-mark hero-tech-mark-one" aria-hidden="true"></span>
+          <span class="hero-tech-mark hero-tech-mark-two" aria-hidden="true"></span>
+        </div>
+      </section>
+
+      <section class="print-section technologies" id="technologies" aria-labelledby="technologies-title">
+        <h2 class="section-title" id="technologies-title">Выберите технологию</h2>
+        <div class="technology-grid">
+          <article class="technology-card">
+            <div class="technology-copy">
+              <p class="tech-label">Печать филаментом</p>
+              <h3>FDM-печать</h3>
+              <p>Филамент — пластиковая нить на катушке. Материал расплавляется и послойно формирует деталь.</p>
+              <p class="material-line">ABS · PETG · PLA · PA · PETG-CF · TPU</p>
+              <dl class="technology-facts">
+                <div><dt>Плюсы</dt><dd>Прочность · размеры · выбор материалов</dd></div>
+                <div><dt>Особенности</dt><dd>Видимость слоёв · меньшая проработка мелких элементов</dd></div>
+              </dl>
+            </div>
+            <div class="technology-image">
+              <img src="assets/printing/fdm-cover.webp" loading="lazy" alt="Белая функциональная деталь, напечатанная филаментом">
+            </div>
+          </article>
+
+          <article class="technology-card">
+            <div class="technology-copy">
+              <p class="tech-label">Фотополимерная печать</p>
+              <h3>MSLA-печать</h3>
+              <p>Фотополимер — это жидкая смола, которая послойно отверждается ультрафиолетом через LCD-маску.</p>
+              <p class="material-line">Смолы: ABS-подобные · прозрачные · гибкие · специальные</p>
+              <dl class="technology-facts">
+                <div><dt>Плюсы</dt><dd>Детализация · гладкая поверхность</dd></div>
+                <div><dt>Особенности</dt><dd>Хрупкость · усадка смолы не даёт добиться точных посадочных размеров и допусков</dd></div>
+              </dl>
+            </div>
+            <div class="technology-image technology-image-resin">
+              <img src="assets/printing/msla-cover.webp" loading="lazy" alt="Детализированная фигурка, изготовленная фотополимерной печатью">
+            </div>
+          </article>
+        </div>
+        <div class="comparison-strip" aria-hidden="true">
+          <span>Функциональные детали <b>→ FDM</b></span>
+          <i></i>
+          <span>Высокая детализация <b>→ MSLA</b></span>
+        </div>
+      </section>
+
+      <section class="print-section equipment" aria-labelledby="equipment-title">
+        <h2 class="section-title" id="equipment-title">Оборудование</h2>
+        <div class="equipment-list">
+          <article class="equipment-card">
+            <div class="equipment-cover">
+              <img src="assets/printing/anycubic-cover.webp" loading="lazy" alt="Anycubic Kobra S1 Combo с системой ACE Pro">
+            </div>
+            <div class="equipment-copy">
+              <p class="tech-label">FDM · CoreXY</p>
+              <h3>Anycubic Kobra S1 Combo<br>+ ACE Pro</h3>
+              <p>Закрытый CoreXY-принтер для функциональных деталей, прототипов и малых серий. Система ACE Pro автоматически меняет филамент и позволяет печатать до четырёх цветов.</p>
+              <ul class="spec-list">
+                <li><strong>250 × 250 × 250 мм</strong><span>Рабочая область</span></li>
+                <li><strong>До 320 °C</strong><span>Температура сопла</span></li>
+                <li><strong>До 4 цветов</strong><span>Автосмена филамента</span></li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="equipment-card equipment-card-reverse">
+            <div class="equipment-cover">
+              <img src="assets/printing/elegoo-cover.webp" loading="lazy" alt="Фотополимерный принтер Elegoo Saturn 4 Ultra 16K">
+            </div>
+            <div class="equipment-copy">
+              <p class="tech-label">MSLA · 16K</p>
+              <h3>Elegoo Saturn 4 Ultra 16K</h3>
+              <p>Фотополимерный принтер для миниатюр, макетов и деталей со сложной геометрией. Разрешение 16K передаёт мелкий рельеф, а подогрев смолы повышает стабильность печати.</p>
+              <ul class="spec-list">
+                <li><strong>211,68 × 118,37 × 220 мм</strong><span>Рабочая область</span></li>
+                <li><strong>14 × 19 мкм</strong><span>Разрешение XY</span></li>
+                <li><strong>До 30 °C</strong><span>Подогрев смолы</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="print-section finishing" aria-labelledby="finishing-title">
+        <h2 class="section-title" id="finishing-title">После печати</h2>
+        <div class="process-row">
+          <article class="process-card"><img src="assets/printing/process/thread.webp" loading="lazy" alt=""><h3>Нарезка<br>резьбы</h3></article>
+          <article class="process-card"><img src="assets/printing/process/inserts.webp" loading="lazy" alt=""><h3>Вплавляемые<br>втулки</h3></article>
+          <article class="process-card"><img src="assets/printing/process/sanding.webp" loading="lazy" alt=""><h3>Шлифовка</h3></article>
+          <article class="process-card"><img src="assets/printing/process/polishing.webp" loading="lazy" alt=""><h3>Полировка</h3></article>
+          <article class="process-card"><img src="assets/printing/process/primer.webp" loading="lazy" alt=""><h3>Грунтовка</h3></article>
+          <article class="process-card"><img src="assets/printing/process/paint.webp" loading="lazy" alt=""><h3>Покраска</h3></article>
+          <article class="process-card"><img src="assets/printing/process/art-paint.webp" loading="lazy" alt=""><h3>Художественный<br>покрас</h3></article>
+        </div>
+
+        <h2 class="section-title workflow-title">От файла до готовой детали</h2>
+        <ol class="workflow-row">
+          <li class="workflow-card"><span>01</span><img src="assets/printing/workflow/check.webp" loading="lazy" alt=""><h3>Проверяем модель</h3></li>
+          <li class="workflow-card"><span>02</span><img src="assets/printing/workflow/choose.webp" loading="lazy" alt=""><h3>Подбираем технологию</h3></li>
+          <li class="workflow-card"><span>03</span><img src="assets/printing/workflow/make.webp" loading="lazy" alt=""><h3>Печатаем и обрабатываем</h3></li>
+          <li class="workflow-card"><span>04</span><img src="assets/printing/workflow/deliver.webp" loading="lazy" alt=""><h3>Передаём заказ</h3></li>
+        </ol>
+      </section>
+
+      <section class="print-section works" id="works" aria-labelledby="works-title">
+        <h2 class="section-title" id="works-title">Работы</h2>
+        <div class="works-carousel" data-carousel>
+          <button class="carousel-button carousel-prev" type="button" aria-label="Предыдущие работы" data-carousel-prev>←</button>
+          <div class="works-track" data-carousel-track tabindex="0" aria-label="Галерея выполненных работ">
+            <figure><img src="assets/printing/portfolio/01-case.webp" loading="lazy" alt="Напечатанный чехол для электронной книги"></figure>
+            <figure><img src="assets/printing/portfolio/02-crossbow.webp" loading="lazy" alt="Фигурка арбалетчицы"></figure>
+            <figure><img src="assets/printing/portfolio/05-parts.webp" loading="lazy" alt="Комплект функциональных деталей"></figure>
+            <figure><img src="assets/printing/portfolio/07-city.webp" loading="lazy" alt="Макет города"></figure>
+            <figure><img src="assets/printing/portfolio/03-emblems.webp" loading="lazy" alt="Набор фотополимерных гербов"></figure>
+            <figure><img src="assets/printing/portfolio/06-enclosure.webp" loading="lazy" alt="Напечатанный корпус устройства"></figure>
+            <figure><img src="assets/printing/portfolio/08-mirana.webp" loading="lazy" alt="Окрашенная фигурка лучницы"></figure>
+            <figure><img src="assets/printing/portfolio/09-rocket.webp" loading="lazy" alt="Окрашенная декоративная ракета"></figure>
+            <figure><img src="assets/printing/portfolio/04-detail.webp" loading="lazy" alt="Функциональная печатная деталь"></figure>
+            <figure><img src="assets/printing/portfolio/10-handle.webp" loading="lazy" alt="Напечатанная ручка стеклореза"></figure>
+            <figure><img src="assets/printing/portfolio/11-phantom.webp" loading="lazy" alt="Фигурка воина с древковым оружием"></figure>
+            <figure><img src="assets/printing/portfolio/12-swords.webp" loading="lazy" alt="Детализированная фантазийная фигурка"></figure>
+          </div>
+          <button class="carousel-button carousel-next" type="button" aria-label="Следующие работы" data-carousel-next>→</button>
+        </div>
+        <div class="carousel-progress" aria-hidden="true"><span data-carousel-progress></span></div>
+      </section>
+
+      <section class="print-cta" aria-labelledby="print-cta-title">
+        <div>
+          <p class="tech-label">Можно начать с фотографии или описания</p>
+          <h2 id="print-cta-title">Есть задача? Рассчитаем<span class="orange-dot">.</span></h2>
+        </div>
+        <a class="primary-button" href="contacts.html#contact-actions">Перейти к заказу</a>
+      </section>
+    </main>
+
+    <footer class="print-footer">
+      <p>© 3DETAILS</p>
+      <p>Мастерская печати пластиком · Москва</p>
+    </footer>
+  </div>
+  <script src="printing.js" defer></script>
+</body>
+</html>

@@ -323,22 +323,48 @@
 }
 
 .avito-logo {
-  grid-template-columns: repeat(2, 10px);
-  grid-template-rows: repeat(2, 10px);
-  gap: 2px;
+  position: relative;
+  display: block;
   background: transparent;
+  border-radius: 0;
 }
 
 .avito-logo i {
-  width: 10px;
-  height: 10px;
+  position: absolute;
   border-radius: 50%;
 }
 
-.avito-logo i:nth-child(1) { background: #00aaff; }
-.avito-logo i:nth-child(2) { background: #965eeb; }
-.avito-logo i:nth-child(3) { background: #ff6163; }
-.avito-logo i:nth-child(4) { background: #97cf26; }
+.avito-logo i:nth-child(1) {
+  top: 5px;
+  left: 5px;
+  width: 13px;
+  height: 13px;
+  background: #00aaff;
+}
+
+.avito-logo i:nth-child(2) {
+  top: 3px;
+  right: 3px;
+  width: 16px;
+  height: 16px;
+  background: #965eeb;
+}
+
+.avito-logo i:nth-child(3) {
+  bottom: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #ff6163;
+}
+
+.avito-logo i:nth-child(4) {
+  right: 5px;
+  bottom: 5px;
+  width: 13px;
+  height: 13px;
+  background: #97cf26;
+}
 
 .location-section {
   min-width: 0;
