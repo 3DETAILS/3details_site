@@ -1,13 +1,6 @@
 /* 3DETAILS · approved printing concepts, 2026-10-09.
    One scoped stylesheet. Product silhouettes are real alpha images;
    their floor shadows and the technical ornament belong to the page. */
-@font-face{font-family:Oswald;src:url('assets/fonts/oswald-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
-@font-face{font-family:Oswald;src:url('assets/fonts/oswald-semibold.woff') format('woff');font-style:normal;font-weight:600;font-display:swap}
-@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-regular.woff') format('woff');font-style:normal;font-weight:400;font-display:swap}
-@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
-@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-semibold.woff') format('woff');font-style:normal;font-weight:600;font-display:swap}
-@font-face{font-family:Manrope;src:url('assets/fonts/manrope-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
-@font-face{font-family:Manrope;src:url('assets/fonts/manrope-bold.woff') format('woff');font-style:normal;font-weight:700;font-display:swap}
 
 .printing-page{
   --ink:#061b3a;--cyan:#08a5c3;--muted-cyan:#5e9bb3;--orange:#ff5008;
@@ -43,13 +36,12 @@
 .printing-page .primary-button:hover{background:#e54400;border-color:#e54400}
 .printing-page .blueprint{position:relative;background-image:url('assets/printing/approved/technical-background.svg');background-size:100% 100%;background-repeat:no-repeat}
 
-/* Condensing the same complete Cyrillic/Latin font preserves one cap height.
-   The text remains selectable, searchable and readable by assistive tools. */
-.printing-page .type-narrow{display:inline-block;transform:scaleX(.58);transform-origin:left center;font-family:Oswald,'Arial Narrow',sans-serif;font-weight:500;white-space:nowrap;text-transform:uppercase;letter-spacing:0}
+/* Use the homepage face at its native proportions; sizes fit the text columns. */
+.printing-page .heading-text{display:inline-block;max-width:100%;font-family:inherit;font-weight:inherit;text-transform:uppercase;letter-spacing:inherit}
 .printing-page .print-hero{display:grid;grid-template-columns:42% 58%;align-items:center;min-height:0;aspect-ratio:2.16;padding:2.5% 2% 3% 3.85%;isolation:isolate}
 .printing-page .print-hero-copy{position:relative;z-index:2;min-width:0;padding:1.5% 0 5%}
-.printing-page #print-title{font-size:clamp(110px,13.15vw,252px);line-height:1.14;letter-spacing:0;margin:0 0 2.1vw}
-.printing-page #print-title .type-narrow{transform:scaleX(.53)}
+.printing-page #print-title{font-size:clamp(48px,7.5vw,144px);line-height:1.14;letter-spacing:0;margin:0 0 2.1vw}
+.printing-page #print-title .heading-text,.printing-page .technology-copy .heading-text{white-space:nowrap}
 .printing-page .print-lead{max-width:100%;font-size:clamp(19px,1.86vw,35px);font-weight:500;line-height:1.38;letter-spacing:-.018em}
 .printing-page .hero-actions{display:grid;grid-template-columns:1fr 1fr;gap:1.6vw;max-width:90%;margin-top:3.85vw}
 .printing-page .print-hero-visual{position:relative;min-width:0;align-self:center;width:100%;isolation:isolate;padding:0 0 2.5%;margin-top:2%}
@@ -59,13 +51,10 @@
 .printing-page .hero-target-left{position:absolute;left:23%;top:6%;width:52px;height:52px;opacity:.65}
 
 .printing-page .print-section{padding:var(--section-space) 2.5% 0;scroll-margin-top:28px}
-.printing-page .section-title{display:flex;justify-content:center;align-items:center;gap:clamp(18px,1.7vw,32px);font-size:clamp(48px,4.65vw,90px);line-height:1.15;margin-bottom:clamp(25px,2.4vw,46px);text-align:center;text-transform:uppercase}
-.printing-page .title-fit{display:block;flex:none;text-align:left;width:var(--title-width)}
-.printing-page .section-title-large{font-size:clamp(70px,7.65vw,146px);--title-width:5.7693em;margin-bottom:2.1vw}
-.printing-page #equipment-title{--title-width:3.8094em}
-.printing-page #finishing-title{--title-width:3.5386em}
-.printing-page .workflow-title{--title-width:7.5603em;font-size:clamp(40px,4.05vw,78px)}
-.printing-page #works-title{--title-width:1.9418em}
+.printing-page .section-title{display:flex;justify-content:center;align-items:center;gap:clamp(18px,1.7vw,32px);font-size:clamp(36px,4.1vw,79px);line-height:1.15;margin-bottom:clamp(25px,2.4vw,46px);text-align:center;text-transform:uppercase}
+.printing-page .title-fit{display:block;min-width:0;text-align:center}
+.printing-page .section-title-large{font-size:clamp(40px,5.6vw,108px);margin-bottom:2.1vw}
+.printing-page .workflow-title{font-size:clamp(28px,3.3vw,63px)}
 .printing-page .technologies{padding-top:3.1vw;padding-bottom:2.2vw}
 .printing-page .technology-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.35vw}
 .printing-page .technology-card{position:relative;isolation:isolate;display:flex;flex-direction:column;gap:1.5vw;min-height:clamp(410px,33.45vw,642px);min-width:0;border:1.4px solid #102552;border-radius:9px;padding:3.6% 5.1%;background:rgb(250 249 246 / 66%);overflow:hidden}
@@ -73,7 +62,7 @@
 .printing-page .technology-copy{position:relative;z-index:2;width:48%}
 .printing-page .tech-label{font-size:clamp(12px,.99vw,19px);font-weight:600;line-height:1.15;text-transform:uppercase}
 .printing-page .technology-copy .tech-label::before{content:'';display:block;width:clamp(30px,2.65vw,51px);height:3px;margin-bottom:1.05vw;background:var(--cyan)}
-.printing-page .technology-copy h3{font-size:clamp(60px,5.55vw,106px);line-height:1.12;margin-top:.95vw;margin-bottom:1.2vw}
+.printing-page .technology-copy h3{font-size:clamp(30px,3.1vw,60px);line-height:1.12;margin-top:.95vw;margin-bottom:1.2vw}
 .printing-page .technology-description{font-size:clamp(14px,1.12vw,21.5px);line-height:1.46;font-weight:400;letter-spacing:-.018em}
 .printing-page .material-line{margin-top:1.7vw;font-size:clamp(13px,1.04vw,20px);font-weight:500;line-height:1.4;text-transform:uppercase;color:#07529e}
 .printing-page .technology-fdm .material-line{white-space:nowrap}
@@ -106,8 +95,8 @@
 .printing-page .machine-lettering{position:absolute;inset:-1.1vw -2% auto -3.5%;z-index:0;color:#ffb900;font-family:Manrope,Arial,sans-serif;font-size:clamp(57px,5.25vw,101px);font-weight:700;line-height:.98;letter-spacing:-.07em;pointer-events:none}
 .printing-page .machine-lettering span{display:block;white-space:nowrap}
 .printing-page .equipment-cover img{position:absolute;z-index:1;right:-5%;bottom:-9%;height:118%;width:auto;max-width:87%;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 12px 5px rgb(37 37 35 / 14%))}
-.printing-page .equipment-copy{grid-area:copy;position:relative;z-index:2;padding:1.2vw 1.65vw 1.2vw 1.1vw}
-.printing-page .equipment-copy h3{font-family:Oswald,'Arial Narrow',sans-serif;font-size:clamp(34px,3.2vw,61px);line-height:1.08;font-weight:500;letter-spacing:0;margin-bottom:1.25vw}
+.printing-page .equipment-copy{grid-area:copy;min-width:0;position:relative;z-index:2;padding:1.2vw 1.65vw 1.2vw 1.1vw}
+.printing-page .equipment-copy h3{font-family:Oswald,'Arial Narrow',sans-serif;font-size:clamp(23px,2vw,38px);line-height:1.08;font-weight:500;letter-spacing:0;margin-bottom:1.25vw}
 .printing-page .equipment-copy h3 span{display:block}
 .printing-page .equipment-copy p{font-size:clamp(14px,1.12vw,21px);line-height:1.47}
 .printing-page .equipment-copy .equipment-label{color:#0699b5;font-size:clamp(13px,1.06vw,20px);font-weight:500;line-height:1.2;text-transform:uppercase;margin-bottom:1.1vw}
@@ -216,15 +205,15 @@
   .printing-page .mobile-menu nav{position:absolute;right:0;top:58px;display:grid;width:min(82vw,330px);padding:16px;background:var(--paper);border:1px solid var(--ink);box-shadow:0 15px 35px #071d431a}
   .printing-page .mobile-menu nav a{padding:14px;color:var(--ink);font:700 13px Manrope,Arial,sans-serif;text-decoration:none;text-transform:uppercase}
   .printing-page .print-hero{aspect-ratio:auto;min-height:490px;padding-block:50px;grid-template-columns:43% 57%}
-  .printing-page #print-title{font-size:13.1vw;margin-bottom:25px}
+  .printing-page #print-title{font-size:7.5vw;margin-bottom:25px}
   .printing-page .print-lead{font-size:18px}.printing-page .hero-actions{margin-top:32px;gap:10px}
   .printing-page .primary-button,.printing-page .secondary-button{font-size:16px;min-height:54px;padding-inline:12px}
   .printing-page .technology-grid{grid-template-columns:1fr;gap:28px;max-width:900px;margin-inline:auto}
-  .printing-page .section-title-large{font-size:10.7vw;margin-bottom:30px}
+  .printing-page .section-title-large{font-size:6.3vw;margin-bottom:30px}
   .printing-page .technology-card{min-height:620px;gap:28px;padding:4.2% 5.1%}
   .printing-page .tech-label{font-size:16px}
   .printing-page .technology-copy .tech-label::before{margin-bottom:16px;width:44px}
-  .printing-page .technology-copy h3{font-size:clamp(75px,10vw,102px);margin-top:16px;margin-bottom:24px}
+  .printing-page .technology-copy h3{font-size:clamp(40px,6.1vw,64px);margin-top:16px;margin-bottom:24px}
   .printing-page .technology-description{font-size:19px;line-height:1.42}
   .printing-page .material-line{font-size:17px;margin-top:28px}
   .printing-page .technology-facts{font-size:16px;width:56%}
@@ -239,7 +228,7 @@
   .printing-page .equipment-card,.printing-page .equipment-card-reverse{grid-template-columns:43% 57%;grid-template-areas:'cover copy' 'cover specs';padding:28px 24px;min-height:390px}
   .printing-page .equipment-card-reverse{grid-template-columns:57% 43%;grid-template-areas:'copy cover' 'specs cover'}
   .printing-page .equipment-copy{padding:0 0 20px 24px}
-  .printing-page .equipment-copy h3{font-size:clamp(38px,4.5vw,47px);margin-bottom:16px}
+  .printing-page .equipment-copy h3{font-size:clamp(28px,3.6vw,38px);margin-bottom:16px}
   .printing-page .equipment-copy p{font-size:17px}
   .printing-page .machine-lettering{font-size:5.5vw;line-height:1.08;inset:0 auto auto -5%}
   .printing-page .equipment-cover img{height:108%;max-width:128%;right:-11%;bottom:-9%}
@@ -256,7 +245,7 @@
   .printing-page .process-row{grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
   .printing-page .process-card{height:255px;padding:12px 8px 20px}
   .printing-page .process-card h3{font-size:21px}.printing-page .process-card::after{display:none}
-  .printing-page .workflow-title{margin-top:50px;margin-bottom:25px;font-size:5.1vw}
+  .printing-page .workflow-title{margin-top:50px;margin-bottom:25px;font-size:3.9vw}
   .printing-page .workflow-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
   .printing-page .workflow-card{height:290px;padding:20px}
   .printing-page .workflow-card h3{font-size:25px}.printing-page .workflow-card::after{display:none}
@@ -271,8 +260,7 @@
   .printing-page .mobile-menu summary{width:42px;height:42px}
   .printing-page .print-hero{grid-template-columns:1fr;min-height:0;padding:40px 6% 25px;gap:8px}
   .printing-page .print-hero-copy{padding:0}
-  .printing-page #print-title{font-size:24vw;line-height:1.1;margin:0 0 22px}
-  .printing-page #print-title .type-narrow{transform:scaleX(.62)}
+  .printing-page #print-title{font-size:16vw;line-height:1.1;margin:0 0 22px}
   .printing-page .print-lead{font-size:clamp(19px,3.5vw,24px);line-height:1.4;max-width:530px;letter-spacing:0}
   .printing-page .desktop-break{display:none}
   .printing-page .hero-actions{grid-template-columns:1fr 1fr;gap:14px;max-width:none;width:100%;margin-top:24px}
@@ -283,16 +271,16 @@
   .printing-page .hero-target-left{top:20px;left:auto;right:8%;width:34px;height:34px}
   .printing-page .hero-target{display:none}
   .printing-page .print-section{padding-inline:5%}
-  .printing-page .section-title{font-size:11vw;gap:14px;margin-bottom:26px}
+  .printing-page .section-title{font-size:8.6vw;gap:14px;margin-bottom:26px}
   .printing-page .section-title>.drawing-target{width:36px;height:34px}
-  .printing-page .section-title-large{font-size:13.4vw;line-height:1.2;margin-bottom:26px}
+  .printing-page .section-title-large{font-size:8.1vw;line-height:1.2;margin-bottom:26px}
   .printing-page .technologies{padding-top:28px;padding-bottom:0}
   .printing-page .technology-card{display:grid;grid-template-columns:1fr;aspect-ratio:auto;min-height:0;gap:0;padding:26px 25px 28px;overflow:hidden;border-radius:8px}
   .printing-page .technology-copy,.printing-page .technology-msla .technology-copy{width:100%}
   .printing-page .card-target{right:18px;top:20px;width:35px;height:35px}
   .printing-page .tech-label{font-size:14px}
   .printing-page .technology-copy .tech-label::before{width:38px;margin-bottom:13px;height:2px}
-  .printing-page .technology-copy h3{font-size:clamp(68px,14vw,96px);line-height:1.15;margin-top:16px;margin-bottom:20px}
+  .printing-page .technology-copy h3{font-size:clamp(32px,10.5vw,64px);line-height:1.15;margin-top:16px;margin-bottom:20px}
   .printing-page .technology-description{font-size:18px;line-height:1.45;max-width:470px}
   .printing-page .material-line{font-size:16px;line-height:1.5;margin-top:22px;max-width:480px}
   .printing-page .technology-fdm .material-line{white-space:normal}
@@ -328,7 +316,7 @@
   .printing-page .process-card{height:250px;padding:10px 5px 17px;border-radius:10px}
   .printing-page .process-card h3{font-size:clamp(16px,3.6vw,24px)}
   .printing-page .process-card:last-child{grid-column:1 / -1;width:calc(50% - 7px);justify-self:center}
-  .printing-page .workflow-title{font-size:9.4vw;margin-top:42px;gap:9px}
+  .printing-page .workflow-title{font-size:6.9vw;margin-top:42px;gap:9px}
   .printing-page .workflow-title>.drawing-target{display:none}
   .printing-page .workflow-row{gap:16px}
   .printing-page .workflow-card{height:250px;padding:14px 8px;border-radius:10px}
@@ -353,7 +341,6 @@
   .printing-page .print-hero{padding-inline:5%}.printing-page .hero-actions{gap:9px}
   .printing-page .primary-button,.printing-page .secondary-button{font-size:16px}
   .printing-page .technology-card{padding-inline:20px}
-  .printing-page .technology-copy h3{font-size:65px}
   .printing-page .technology-facts>div,.printing-page .technology-msla .technology-facts>div{grid-template-columns:44% 56%}
   .printing-page .technology-facts dt{font-size:12px;gap:6px;padding-right:6px}
   .printing-page .technology-facts dd{font-size:14px;padding-left:10px}

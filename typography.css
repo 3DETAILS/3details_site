@@ -1,0 +1,31 @@
+/* Shared type: homepage headings and the printing-page introductory paragraph. */
+@font-face{font-family:Oswald;src:url('assets/fonts/oswald-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Oswald;src:url('assets/fonts/oswald-semibold.woff') format('woff');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Oswald;src:url('assets/fonts/oswald-bold.woff') format('woff');font-style:normal;font-weight:700;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-regular.woff') format('woff');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:'Roboto Condensed';src:url('assets/fonts/roboto-condensed-semibold.woff') format('woff');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope-regular.woff') format('woff');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope-medium.woff') format('woff');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope-semibold.woff') format('woff');font-style:normal;font-weight:600;font-display:swap}
+@font-face{font-family:Manrope;src:url('assets/fonts/manrope-bold.woff') format('woff');font-style:normal;font-weight:700;font-display:swap}
+
+:root {
+  --font-heading: 'Oswald', 'Arial Narrow', sans-serif;
+  --font-paragraph: 'Roboto Condensed', Arial, sans-serif;
+  --weight-heading: 700;
+  --weight-paragraph: 500;
+}
+
+/* Load after the page styles so existing and future headings share one face. */
+:root .page-shell :is(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-heading);
+  font-weight: var(--weight-heading);
+  font-synthesis: none;
+}
+
+:root .page-shell p {
+  font-family: var(--font-paragraph);
+  font-weight: var(--weight-paragraph);
+  font-synthesis: none;
+}
