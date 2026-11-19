@@ -11,14 +11,13 @@
   <link rel="preload" href="assets/fonts/oswald-bold.woff" as="font" type="font/woff" crossorigin>
   <link rel="preload" href="assets/fonts/roboto-condensed-medium.woff" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="printing.css?v=20261117">
+  <link rel="stylesheet" href="printing.css?v=20261119-2">
   <link rel="stylesheet" href="typography.css?v=20261117">
 </head>
 <body class="printing-page">
   <a class="skip-link" href="#main">Перейти к содержимому</a>
   <svg class="icon-definitions" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
     <defs>
-      <symbol id="i-target" viewBox="0 0 64 44"><path d="M0 22h25m14 0h25M32 0v15m0 14v15"/><circle cx="32" cy="22" r="8"/><circle cx="32" cy="22" r="2" class="target-dot"/><path d="M19 22h6m14 0h6M32 9v5m0 16v5"/></symbol>
       <symbol id="i-plus" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14.5"/><path d="M16 8v16M8 16h16"/></symbol>
       <symbol id="i-gear" viewBox="0 0 32 32"><circle cx="16" cy="16" r="14.5"/><path d="m14 7-.7 2.5-2 .8-2.3-.6-2 3.5 1.6 1.9v2L7 19l2 3.5 2.3-.6 2 .8L14 25h4l.7-2.3 2-.8 2.3.6 2-3.5-1.6-1.9v-2L25 13l-2-3.5-2.3.6-2-.8L18 7Z"/><circle cx="16" cy="16" r="3"/></symbol>
       <symbol id="i-volume" viewBox="0 0 40 40"><path d="m8 12 12-7 12 7v15l-12 7-12-7Zm0 0 12 7 12-7M20 19v15M4 9v21m0-21 3 2m-3 19 3-2M11 36l9 4 10-5"/></symbol>
@@ -51,22 +50,22 @@
           <div class="hero-actions"><a class="primary-button" href="contacts.html#contact-actions">Рассчитать заказ</a><a class="secondary-button" href="#works">Смотреть работы</a></div>
         </div>
         <div class="print-hero-visual">
-          <img class="hero-object" src="assets/printing/hero-cutout.png" alt="Чёрная функциональная деталь с хорошо различимой текстурой 3D-печати" width="1031" height="701" fetchpriority="high" decoding="async">
-          <svg class="drawing-target hero-target" aria-hidden="true"><use href="#i-target"/></svg>
+          <img class="hero-object" src="assets/printing/hero-speaker-cutout.png" alt="Напечатанный подиум под автомобильные динамики с крепежом и проводкой" width="1086" height="1448" fetchpriority="high" decoding="async">
+
         </div>
-        <svg class="drawing-target hero-target-left" aria-hidden="true"><use href="#i-target"/></svg>
+
       </section>
 
       <section class="print-section technologies blueprint" id="technologies" aria-labelledby="technologies-title">
         <h2 class="section-title section-title-large" id="technologies-title"><span class="title-fit"><span class="heading-text">Выберите технологию</span></span></h2>
         <div class="technology-grid">
           <article class="technology-card technology-fdm" aria-labelledby="fdm-title">
-            <svg class="drawing-target card-target" aria-hidden="true"><use href="#i-target"/></svg>
+
             <div class="technology-copy">
               <p class="tech-label">Печать филаментом</p>
               <h3 id="fdm-title"><span class="heading-text">FDM-ПЕЧАТЬ</span></h3>
               <p class="technology-description">Филамент — пластиковая нить на катушке. Материал расплавляется и послойно формирует деталь.</p>
-              <p class="material-line">ABS · PETG · PLA · PA · PETG-CF · TPU</p>
+              <p class="material-line">ABS · PETG · PLA · PA<br>PETG-CF · TPU · ASA · ASA-GF</p>
             </div>
             <img class="technology-object fdm-object" src="assets/printing/approved/fdm.webp" width="1254" height="1254" loading="lazy" decoding="async" alt="Белый нейлоновый патрон для лампы, напечатанный методом FDM">
             <dl class="technology-facts">
@@ -76,12 +75,12 @@
           </article>
 
           <article class="technology-card technology-msla" aria-labelledby="msla-title">
-            <svg class="drawing-target card-target" aria-hidden="true"><use href="#i-target"/></svg>
+
             <div class="technology-copy">
               <p class="tech-label">Фотополимерная печать</p>
               <h3 id="msla-title"><span class="heading-text">MSLA-ПЕЧАТЬ</span></h3>
               <p class="technology-description">Фотополимер — это жидкая смола, которая послойно отверждается ультрафиолетом через LCD-маску.</p>
-              <p class="material-line">Смолы: ABS-подобные · прозрачные · гибкие · специальные</p>
+              <p class="material-line">Смолы: ABS-подобные<br>Прозрачные · гибкие · специальные</p>
             </div>
             <img class="technology-object msla-object" src="assets/printing/approved/msla.webp" width="1121" height="1403" loading="lazy" decoding="async" alt="Серебристая фотополимерная фигурка воина: мелкий рельеф доспехов и древковое оружие">
             <dl class="technology-facts">
@@ -91,21 +90,21 @@
           </article>
         </div>
         <div class="comparison-strip">
-          <svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg>
+
           <p>Функциональные детали <span aria-hidden="true">→</span> <strong>FDM</strong></p><span class="comparison-divider" aria-hidden="true">/</span><p>Высокая детализация <span aria-hidden="true">→</span> <strong>MSLA</strong></p>
-          <svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg>
+
         </div>
       </section>
 
       <section class="print-section equipment blueprint" aria-labelledby="equipment-title">
-        <h2 class="section-title" id="equipment-title"><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg><span class="title-fit"><span class="heading-text">Оборудование</span></span><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg></h2>
+        <h2 class="section-title" id="equipment-title"><span class="title-fit"><span class="heading-text">Оборудование</span></span></h2>
         <div class="equipment-list">
           <article class="equipment-card" aria-labelledby="anycubic-title">
             <div class="equipment-cover equipment-cover-anycubic">
               <div class="machine-lettering" aria-hidden="true"><span>ANYCUBIC</span><span>S1 COMBO</span><span>ACE</span><span>PRO</span></div>
               <img src="assets/printing/approved/anycubic.webp" width="1217" height="1280" loading="lazy" decoding="async" alt="Anycubic Kobra S1 Combo с модулем ACE Pro сверху">
             </div>
-            <div class="equipment-copy"><p class="equipment-label">FDM · CoreXY</p><h3 id="anycubic-title"><span class="heading-text">ANYCUBIC KOBRA S1 COMBO<br>+ ACE PRO</span></h3><p>Закрытый CoreXY-принтер для функциональных деталей, прототипов и малых серий. Система ACE Pro автоматически меняет филамент и позволяет печатать до четырёх цветов.</p></div>
+            <div class="equipment-copy"><p class="equipment-label">FDM · CoreXY</p><h3 id="anycubic-title"><span class="heading-text">ANYCUBIC KOBRA S1 COMBO<br>+ ACE PRO</span></h3><p>Закрытый CoreXY-принтер для функциональных деталей, прототипов и малых серий.<br>Система ACE Pro автоматически меняет филамент и позволяет печатать до четырёх цветов.</p></div>
             <ul class="spec-list">
               <li><svg aria-hidden="true"><use href="#i-volume"/></svg><div><strong>250 × 250 × 250 мм</strong><span>Рабочая область</span></div></li>
               <li><svg aria-hidden="true"><use href="#i-heat"/></svg><div><strong>До 320 °C</strong><span>Температура сопла</span></div></li>
@@ -117,7 +116,7 @@
               <div class="machine-lettering" aria-hidden="true"><span>ELEGOO</span><span>SATURN 4</span><span>ULTRA</span><span>16K</span></div>
               <img src="assets/printing/approved/elegoo.webp" width="1233" height="1275" loading="lazy" decoding="async" alt="Elegoo Saturn 4 Ultra 16K с поднятой защитной крышкой">
             </div>
-            <div class="equipment-copy"><p class="equipment-label">MSLA · 16K</p><h3 id="elegoo-title"><span class="heading-text">ELEGOO SATURN 4 ULTRA 16K</span></h3><p>Фотополимерный принтер для миниатюр, макетов и деталей со сложной геометрией. Разрешение 16K передаёт мелкий рельеф, а подогрев смолы повышает стабильность печати.</p></div>
+            <div class="equipment-copy"><p class="equipment-label">MSLA · 16K</p><h3 id="elegoo-title"><span class="heading-text">ELEGOO SATURN 4 ULTRA 16K</span></h3><p>Фотополимерный принтер для миниатюр, макетов и деталей со сложной геометрией.<br>Разрешение 16K передаёт мелкий рельеф, а подогрев смолы повышает стабильность печати.</p></div>
             <ul class="spec-list">
               <li><svg aria-hidden="true"><use href="#i-volume"/></svg><div><strong>211,68 × 118,37 × 220 мм</strong><span>Рабочая область</span></div></li>
               <li><svg aria-hidden="true"><use href="#i-detail"/></svg><div><strong>14 × 19 мкм</strong><span>Разрешение XY</span></div></li>
@@ -128,7 +127,7 @@
       </section>
 
       <section class="print-section finishing" aria-labelledby="finishing-title">
-        <h2 class="section-title" id="finishing-title"><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg><span class="title-fit"><span class="heading-text">После печати</span></span><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg></h2>
+        <h2 class="section-title" id="finishing-title"><span class="title-fit"><span class="heading-text">После печати</span></span></h2>
         <div class="process-row">
           <article class="process-card"><img src="assets/printing/approved/thread.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Нарезка<br>резьбы</h3></article>
           <article class="process-card"><img src="assets/printing/approved/inserts.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Вплавляемые<br>втулки</h3></article>
@@ -138,17 +137,10 @@
           <article class="process-card"><img src="assets/printing/approved/paint.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Покраска</h3></article>
           <article class="process-card"><img src="assets/printing/approved/art-paint.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Художественный<br>покрас</h3></article>
         </div>
-        <h2 class="section-title workflow-title"><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg><span class="title-fit"><span class="heading-text">От файла до готовой детали</span></span><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg></h2>
-        <ol class="workflow-row">
-          <li class="workflow-card"><span class="step-number" aria-hidden="true">01</span><img src="assets/printing/approved/check.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Проверяем модель</h3></li>
-          <li class="workflow-card"><span class="step-number" aria-hidden="true">02</span><img src="assets/printing/approved/choose.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Подбираем технологию</h3></li>
-          <li class="workflow-card"><span class="step-number" aria-hidden="true">03</span><img src="assets/printing/approved/make.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Печатаем и обрабатываем</h3></li>
-          <li class="workflow-card"><span class="step-number" aria-hidden="true">04</span><img src="assets/printing/approved/deliver.webp" width="640" height="640" loading="lazy" decoding="async" alt=""><h3>Передаём заказ</h3></li>
-        </ol>
       </section>
 
       <section class="print-section works blueprint" id="works" aria-labelledby="works-title">
-        <h2 class="section-title" id="works-title"><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg><span class="title-fit"><span class="heading-text">Работы</span></span><svg class="drawing-target" aria-hidden="true"><use href="#i-target"/></svg></h2>
+        <h2 class="section-title" id="works-title"><span class="title-fit"><span class="heading-text">Работы</span></span></h2>
         <div class="works-carousel" data-carousel role="region" aria-roledescription="карусель" aria-label="Выполненные работы">
           <button class="carousel-button carousel-prev" type="button" aria-label="Предыдущие работы" aria-controls="works-track" data-carousel-prev hidden><svg aria-hidden="true"><use href="#i-arrow"/></svg></button>
           <div class="works-track" id="works-track" data-carousel-track tabindex="0" aria-label="Фотографии работ — листайте стрелками или свайпом">
